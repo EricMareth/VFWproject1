@@ -16,16 +16,18 @@
 	</head>
 	<body>
 		<h1>Character Note Entry</h1>
+	<!-- Form start-->
 		<form action="#" method="post">
+	<!-- Fieldset and legend for Basic Character Information -->
 			<fieldset>
 				<legend>Basic Character Information</legend>
 				<ul>
-				<!-- Text fields for character name, story the character is from, and the land the character lives in. -->
+	<!-- Text fields and labels for character name, story the character is from, and the land the character lives in. -->
 					<li><label for="charName">Character Name: </label><input type="text" id="charName" /></li>
 					<li><label for="taleName">For the Story: </label><input type="text" id="taleName" /></li>
 					<li><label for="homeLand">Lives In: </label><input type="text" id="homeLand" placeholder="Oz, Neverland, etc." /></li>
 					<li><label for="city">Kingdom? (disabled):</label><input type="text" id="city" disabled />		
-				<!-- Radio button to declare character gender -->
+	<!-- Radio button to declare character gender -->
 					<li>What is the character's gender?
 						<ul>
 							<li><input type="radio" checked value="Male" id="male" name="gender" /><label for="male">Male</label></li>
@@ -35,10 +37,13 @@
 					</li>
 				</ul>
 			</fieldset>
+	<!-- Fieldset and legend for Character Details -->
 			<fieldset>
 				<legend>Character Details</legend>
 				<ul>
+	<!-- Range slider to declare the character's age. -->
 					<li><label for="age">Age Character Looks:</label><input type="range" min="1" max="100" id="age" name="age"/></li>
+	<!-- Select, optgroups and options to declare the character good, bad or indifferent? -->
 					<li><label for="type">Type of Character:</label>
 						<select id="type">
 							<optgroup label="Good">
@@ -58,17 +63,23 @@
 							</optgroup>
 						</select>
 					</li>
+	<!-- Text area for any general notes about the character not covered by input fields. -->
 					<li><label for="details">Other details about your character:</label><textarea id="details"></textarea></li>
 					<li>
+	<!-- Date to record character's real world birthday. -->
 						<label for="created">Date character was created:</label>
 						<input type="date" min="2012-07-13" max="2999-07-13" id="created" name="created" required aria-required="true"/>
 					</li>
 				</ul>
 			</fieldset>
+	<!-- Hidden value to give the character file an ID number for internal reference. -->
 			<input type="hidden" value="charIdNum########" />
+	<!-- Submit input type to add character to the database -->
 			<input type="submit" value="Bring Your Character To Life!" />
-			<a href="#">Clear Stored Data</a>
-			<a href="#">Display Data</a>
+	<!-- Anchor tags to access the "Clear Stored Data" and "Display Data" actions.-->
+			<p><a href="#">Clear Stored Data</a></p>
+			<p><a href="#">Display Data</a></p>
 		</form>
+	<!-- Form end -->	
 	</body>
 </html>
